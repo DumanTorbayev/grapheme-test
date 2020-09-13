@@ -1,6 +1,12 @@
 .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
   min-height: calc(100vh - 103px);
@@ -8,13 +14,21 @@
 }
 
 .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   min-width: 401px;
   min-height: 520px;
   padding: 17px 40px;
   background-color: #fff;
+  -webkit-box-shadow: 0 0 10px #EBF0FF;
   box-shadow: 0 0 10px #EBF0FF;
   border-radius: 24px;
 
@@ -32,7 +46,12 @@
   }
 
   &__field-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 
     &--w-30 {
@@ -80,6 +99,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    background: url(../assets/images/chevron.svg) no-repeat 95% 50%;
 
     &--country {
       width: 60%;
@@ -97,8 +117,15 @@
   }
 
   &__done {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     font-size: 26px;
     font-weight: 300;
