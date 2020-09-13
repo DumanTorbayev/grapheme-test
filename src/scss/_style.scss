@@ -1,0 +1,133 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100vh - 103px);
+  background-color: #F7F8FF;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 401px;
+  min-height: 520px;
+  padding: 17px 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px #EBF0FF;
+  border-radius: 24px;
+
+  .breadcrumb {
+    margin-bottom: 30px;
+  }
+}
+
+.form {
+  &__title {
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 300;
+    color: $main-color;
+  }
+
+  &__field-wrap {
+    display: flex;
+    flex-direction: column;
+
+    &--w-30 {
+      width: 30%;
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &__label {
+    margin-bottom: 6px;
+    font-weight: 300;
+    color: $main-color;
+  }
+
+  &__input, &__select {
+    border: 1px solid #DEDCDC;
+    border-radius: 5px;
+    font-weight: 300;
+    color: $placeholder-color;
+
+    &.has-error {
+      border-color: #FFADAD;
+    }
+  }
+
+  &__input {
+    padding: 11px 15px;
+    @include placeholder {
+      color: $placeholder-color;
+      letter-spacing: 1px;
+      font-weight: 300;
+    }
+
+    &--index {
+      width: 40%;
+    }
+  }
+
+  &__select {
+    padding: 10px 14px;
+    margin-right: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &--country {
+      width: 60%;
+    }
+  }
+
+  &__btn {
+    padding: 14px 39px;
+    background-color: $btn-color;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  &__done {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 300;
+
+    &-text {
+      line-height: 31px;
+      margin-top: 10px;
+    }
+  }
+
+  &--delivery {
+    .form__field-wrap {
+      margin-bottom: 30px;
+    }
+
+    .form__input {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &--payment {
+    .form__field-wrap {
+      margin-bottom: 20px;
+    }
+
+    .form__btn {
+      margin-top: 10px;
+    }
+  }
+}
